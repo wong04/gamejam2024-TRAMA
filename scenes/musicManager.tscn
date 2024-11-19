@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4s8rh2nh4lao"]
+
+[ext_resource type="Script" path="res://scripts/musicManager.gd" id="1_pu1k3"]
+[ext_resource type="AudioStream" uid="uid://bhpetb7n4l7it" path="res://assets/audios/generalCaveMusic.mp3" id="2_rvynf"]
+
+[node name="musicPlayer" type="Node"]
+script = ExtResource("1_pu1k3")
+
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rvynf")
+volume_db = -4.228
+autoplay = true
+parameters/looping = true

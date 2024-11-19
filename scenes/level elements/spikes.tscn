@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dncbjhfru4w24"]
+
+[ext_resource type="PackedScene" uid="uid://d38pcmfecmsje" path="res://scenes/killzone.tscn" id="2_qgkis"]
+[ext_resource type="Texture2D" uid="uid://smp3f6lyi55" path="res://assets/New GJ Assets/spikes.png" id="2_ubl2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kfr4"]
+size = Vector2(36.5, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dubn8"]
+size = Vector2(34, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mw4t"]
+atlas = ExtResource("2_ubl2f")
+region = Rect2(0, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wj4d"]
+atlas = ExtResource("2_ubl2f")
+region = Rect2(42, 0, 42, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ouo5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mw4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wj4d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Spikes" type="StaticBody2D"]
+
+[node name="Killzone" parent="." instance=ExtResource("2_qgkis")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_6kfr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_dubn8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ouo5l")
+autoplay = "default"
+frame_progress = 0.130996

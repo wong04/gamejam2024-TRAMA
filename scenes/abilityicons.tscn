@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://r8mmmghv2tas"]
+
+[ext_resource type="Script" path="res://scripts/abilityicons.gd" id="1_82i7o"]
+[ext_resource type="Texture2D" uid="uid://3g8ywxhum6cp" path="res://assets/Ability Icons/dashicon.png" id="2_yfpwp"]
+[ext_resource type="Texture2D" uid="uid://dj4upj5yot2yy" path="res://assets/Ability Icons/walljumpicon.png" id="3_2k8oh"]
+[ext_resource type="Texture2D" uid="uid://2ainfcaxh2n4" path="res://assets/Ability Icons/superjumpicon.png" id="4_xgkvg"]
+[ext_resource type="Texture2D" uid="uid://bj4gemgcxgxb2" path="res://assets/Ability Icons/gravityicon.png" id="5_4qxn2"]
+
+[node name="abilityicons" type="Node2D"]
+script = ExtResource("1_82i7o")
+
+[node name="dashicon" type="Sprite2D" parent="."]
+position = Vector2(-15, 0)
+texture = ExtResource("2_yfpwp")
+
+[node name="walljumpicon" type="Sprite2D" parent="."]
+position = Vector2(-15, 0)
+texture = ExtResource("3_2k8oh")
+
+[node name="superjumpicon" type="Sprite2D" parent="."]
+position = Vector2(19, 0)
+texture = ExtResource("4_xgkvg")
+
+[node name="gravicon" type="Sprite2D" parent="."]
+position = Vector2(19, 0)
+texture = ExtResource("5_4qxn2")
